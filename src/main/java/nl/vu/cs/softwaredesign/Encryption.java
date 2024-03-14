@@ -6,8 +6,6 @@ public class Encryption{
     private static Map<Integer, String> archivesToPasswords = new HashMap<>();
 
     private Encryption() {
-        this.secretKey = secretKey;
-        this.cipher = Cipher.getInstance("AES");
     }//edit
 
     public static Encryption getInstance() {
@@ -15,13 +13,16 @@ public class Encryption{
             instance = new Encryption();
         }
         return instance;
-    }
+    }//singleton design pattern
+
     public void update(int archiveId, String password){
         archivesToPasswords.put(archiveId, password);
-    }
+    }//integrate it with another method
+
     public boolean validatePassword(int archiveId, String password){
         return archivesToPasswords.get(archiveId).equals(password);
     }
+
     public static void encrypt(String key, File inputFile, File outputFile)
             throws CryptoException {
         doCrypto(Cipher.ENCRYPT_MODE, key, inputFile, outputFile);
@@ -55,5 +56,5 @@ public class Encryption{
                  | IllegalBlockSizeException | IOException ex) {
             throw new CryptoException("Error encrypting/decrypting file", ex);
         }
-    }
+    }//need to figure out where to generate secretKey
 }

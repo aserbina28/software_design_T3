@@ -1,7 +1,7 @@
 package nl.vu.cs.softwaredesign;
 import java.util.Collection;
 
-public class Lz4 extends CompressionStrategy {
+public class Lz4 extends compressionStrategy {
 
     // Set compression level
     public Lz4 (int compressionLevel) {

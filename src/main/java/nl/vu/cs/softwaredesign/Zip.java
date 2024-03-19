@@ -1,7 +1,8 @@
 package nl.vu.cs.softwaredesign;
 import java.util.Collection;
 
-public class Zip extends CompressionStrategy {
+
+public class Zip extends compressionStrategy {
 
     // Set compression level
     public Zip (int compressionLevel) {

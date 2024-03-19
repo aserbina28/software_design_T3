@@ -4,7 +4,7 @@ import java.util.Collection;
 public class Zip extends CompressionStrategy {
 
     // Set compression level
-    public Zip(int compressionLevel) {
+    public Zip (int compressionLevel) {
         this.compressionLevel = compressionLevel;
     }
 
@@ -18,4 +18,3 @@ public class Zip extends CompressionStrategy {
         // TODO: Implement the actual ZIP extraction logic here. Not sure how to to do yet
     }
 }
-

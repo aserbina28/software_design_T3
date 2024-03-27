@@ -14,6 +14,10 @@ public class Archive {
         //this.metadataList = collect.getMetaData();
     }
 
+    public void setEncrypted(boolean encrypted){
+        this.isEncrypted = encrypted;
+    }
+
 //    public Collection decompress(CompressionStrategy c){
 //        //turns archive into collection by unencrypting it
 //        return new Collection;

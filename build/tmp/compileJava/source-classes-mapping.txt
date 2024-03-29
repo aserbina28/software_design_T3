@@ -1,0 +1,6 @@
+nl/vu/cs/softwaredesign/UserInterface.java
+ nl.vu.cs.softwaredesign.UserInterface
+ nl.vu.cs.softwaredesign.UserInterface$1
+ nl.vu.cs.softwaredesign.UserInterface$Command
+nl/vu/cs/softwaredesign/Main.java
+ nl.vu.cs.softwaredesign.Main

@@ -49,11 +49,19 @@ public class Collection {
 
     }
 
-//    public Archive compress(CompressionStrategy c){
-//        //compresses file
-//
-//        return new Archive(this);
-//    }
+    public ArrayList<File> getFiles() {
 
+        return new ArrayList<File>(fileMap.keySet());
+
+    }
+
+    public Archive compress(CompressionStrategy c){
+
+       return c.compress(this);
+    }
+
+    public void extractContents(){
+
+    }
 
 }

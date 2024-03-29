@@ -1,12 +1,16 @@
-nl/vu/cs/softwaredesign/compressionStrategy.java
- nl.vu.cs.softwaredesign.compressionStrategy
+nl/vu/cs/softwaredesign/UserInterface.java
+ nl.vu.cs.softwaredesign.UserInterface
+ nl.vu.cs.softwaredesign.UserInterface$1
+ nl.vu.cs.softwaredesign.UserInterface$Command
 nl/vu/cs/softwaredesign/Metadata.java
  nl.vu.cs.softwaredesign.Metadata
-nl/vu/cs/softwaredesign/Collection.java
- nl.vu.cs.softwaredesign.Collection
-nl/vu/cs/softwaredesign/Archive.java
- nl.vu.cs.softwaredesign.Archive
-nl/vu/cs/softwaredesign/Zip.java
- nl.vu.cs.softwaredesign.Zip
+nl/vu/cs/softwaredesign/CompressionStrategy.java
+ nl.vu.cs.softwaredesign.CompressionStrategy
 nl/vu/cs/softwaredesign/Main.java
  nl.vu.cs.softwaredesign.Main
+nl/vu/cs/softwaredesign/Zip.java
+ nl.vu.cs.softwaredesign.Zip
+nl/vu/cs/softwaredesign/Archive.java
+ nl.vu.cs.softwaredesign.Archive
+nl/vu/cs/softwaredesign/Collection.java
+ nl.vu.cs.softwaredesign.Collection

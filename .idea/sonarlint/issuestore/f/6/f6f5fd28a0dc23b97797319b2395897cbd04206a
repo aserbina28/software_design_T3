@@ -1,9 +1,13 @@
 
 c
-java:S1075
-"ARefactor your code to get this URI from a customizable parameter.(Ú·‹ùÿÿÿÿ8±ó´Öè1
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(éäÄºúÿÿÿÿ8ï˜€Üè1
+^
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(¦Åé×8ğ˜€Üè1
+L	java:S106"+Replace this use of System.out by a logger.(±¯æÑûÿÿÿÿ8ğ˜€Üè1
+L	java:S106"+Replace this use of System.out by a logger.(±¯æÑûÿÿÿÿ8ñ˜€Üè1
+L	java:S106"+Replace this use of System.out by a logger.(±¯æÑûÿÿÿÿ8ò˜€Üè1
+G	java:S106"+Replace this use of System.out by a logger.(ƒÓó»8õ˜€Üè1
 c
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(óëñıÿÿÿÿ8ÁÑãÖè1
-L	java:S106#"+Replace this use of System.out by a logger.(Åõ·ıÿÿÿÿ8¶ó´Öè1
-]	java:S125!"<This block of commented-out lines of code should be removed.(ÄœÛªûÿÿÿÿ8…ä±×è1
-L	java:S106%"+Replace this use of System.out by a logger.(şˆô•øÿÿÿÿ8¶ó´Öè1
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(óëñıÿÿÿÿ8ó˜€Üè1
+L	java:S106'"+Replace this use of System.out by a logger.(Åõ·ıÿÿÿÿ8õ˜€Üè1
+L	java:S106)"+Replace this use of System.out by a logger.(şˆô•øÿÿÿÿ8ÍƒÜè1

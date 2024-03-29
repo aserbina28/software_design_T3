@@ -1,6 +1,6 @@
 package nl.vu.cs.softwaredesign;
 
-public abstract class compressionStrategy {
+public abstract class CompressionStrategy {
     protected int compressionLevel;
 
     // Implementation in subclasses

@@ -1,15 +1,15 @@
 
-€
-java:S1319"eThe type of "mList" should be an interface such as "List" rather than the implementation "ArrayList".(¨•œåşÿÿÿÿ
-†
-java:S13193"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(íÑß
-Q	java:S125"<This block of commented-out lines of code should be removed.(ã†ÌÏ
-V	java:S125"<This block of commented-out lines of code should be removed.(ÖÏ²çüÿÿÿÿ
-V	java:S125."<This block of commented-out lines of code should be removed.(˜£š•øÿÿÿÿ
-J
-java:S1068"/Remove this unused "dateCreated" private field.(ã¦†àüÿÿÿÿ
-M
-java:S1068	"2Remove this unused "compressedSize" private field.(Œôáïıÿÿÿÿ
-E
+‚
+java:S1319"eThe type of "mList" should be an interface such as "List" rather than the implementation "ArrayList".(ôÔ›ì8ÌàÛè1
+
+java:S1319/"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(íÑß8ÌàÛè1
+X	java:S125"<This block of commented-out lines of code should be removed.(ã†ÌÏ8•ÌàÛè1
+]	java:S125"<This block of commented-out lines of code should be removed.(íËÍàıÿÿÿÿ8šÌàÛè1
+]	java:S125*"<This block of commented-out lines of code should be removed.(˜£š•øÿÿÿÿ8œÌàÛè1
+Q
+java:S1068"/Remove this unused "dateCreated" private field.(ã¦†àüÿÿÿÿ8ŸÌàÛè1
+T
+java:S1068	"2Remove this unused "compressedSize" private field.(Œôáïıÿÿÿÿ8ŸÌàÛè1
+L
 java:S1068
-"/Remove this unused "isEncrypted" private field.(»¿•ß
+"/Remove this unused "isEncrypted" private field.(»¿•ß8 ÌàÛè1

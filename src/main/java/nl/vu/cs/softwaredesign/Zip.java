@@ -2,8 +2,7 @@ package nl.vu.cs.softwaredesign;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.util.Collection;
-import java.util.Map;
+import java.util.ArrayList;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -17,23 +16,24 @@ public class Zip extends compressionStrategy {
 
     // Compresses a collection of objects into a ZIP archive format
     @Override
-    public Archive compress(Collection<?> collection) {
-        try {
-            // Write compressed data into byte array in memory
-            ByteArrayOutputStream byteOutStream = new ByteArrayOutputStream();
-            ZipOutputStream zipOutStream = new ZipOutputStream(byteOutStream);
-            zipOutStream.setLevel(compressionLevel); // Use the compression level set in the class
+    public Archive compress(nl.vu.cs.softwaredesign.Collection collection) {
+        // Prepare a byte array output stream to hold the compressed data
+        try (ByteArrayOutputStream byteOutStream = new ByteArrayOutputStream();
+             ZipOutputStream zipOutStream = new ZipOutputStream(byteOutStream)) {
 
-            // Iterate through each file and its metadata in the collection
-            for (Map.Entry<File, Metadata> entry : collection.getFileMap().entrySet()) {
-                File file = entry.getKey();
-                // Metadata metadata = entry.getValue();
+            // Set the compression level
+            zipOutStream.setLevel(compressionLevel);
 
-                // Add a ZIP entry for each file
-                ZipEntry zipEntry = new ZipEntry(metadata.getName());
-                zipOutStream.putNextEntry(zipEntry);
+            // Retrieve the metadata list from the collection
+            ArrayList<Metadata> metadataList = collection.getMetaData();
 
-                // Read the bytes and write to ZIP output stream
+            for (Metadata metadata : metadataList) {
+                // For each file in the collection, create a zip entry
+                ZipEntry entry = new ZipEntry(metadata.getName());
+                zipOutStream.putNextEntry(entry);
+
+                // Read the file's bytes and write them to the zip output stream
+                File file = new File("/Users/jacobroberts/IdeaProjects/software_design_T3/test/" + metadata.getName());
                 byte[] fileBytes = Files.readAllBytes(file.toPath());
                 zipOutStream.write(fileBytes);
 
@@ -41,14 +41,13 @@ public class Zip extends compressionStrategy {
                 zipOutStream.closeEntry();
             }
 
-            //
-            // Finish and close the ZIP output stream
-            zipStream.finish();
-            zipStream.close();
+            // Finish the zip process and get the compressed data
+            zipOutStream.finish();
+            byte[] compressedData = byteOutStream.toByteArray();
 
-            // Create an Archive with the compressed data
-            ByteArrayWrapper compressedDataWrapper = new ByteArrayWrapper(byteOutStream.toByteArray());
-            return new Archive(compressedDataWrapper);
+            // Assuming the Archive constructor accepts a byte array
+            // You might need to adjust this to fit your Archive class's constructor
+            return new Archive(compressedData);
 
         } catch (IOException exception) {
             exception.printStackTrace();
@@ -59,45 +58,57 @@ public class Zip extends compressionStrategy {
     // Extracts the contents of a ZIP archive to a specified destination
     @Override
     public void extractContents(Archive archive, String destination) {
-        // Hypothetical method to get compressed data from the archive as a byte array
-        byte[] compressedData = archive.getCompressedContents();
+        // Ensure the destination directory exists
+        // If the directory does not exist, it's created.
+        File destinationDirectory = new File(destination);
+        if (!destinationDirectory.exists()) {
+            destinationDirectory.mkdirs();
+        }
 
-        // Use try-with-resources for the ByteArrayInputStream and ZipInputStream to ensure they're properly closed
+        // Retrieve the compressed data from the archive.
+        byte[] compressedData = archive.getCompressedData();
+
+        // Initialize the streams for reading the compressed data.
+        // ByteArrayInputStream reads the byte array as an InputStream.
+        // ZipInputStream reads and decompresses the zip data from the input stream.
         try (ByteArrayInputStream byteInStream = new ByteArrayInputStream(compressedData);
              ZipInputStream zipInStream = new ZipInputStream(byteInStream)) {
 
-            ZipEntry zipEntry;
-            // Process each ZIP file entry
-            while ((zipEntry = zipInStream.getNextEntry()) != null) {
-                // Construct the file path for the current ZIP entry
+            // Process each entry in the ZIP file
+            ZipEntry zipEntry = zipInStream.getNextEntry();
+            while (zipEntry != null) {
+                // Construct a file path for current entry
                 String filePath = destination + File.separator + zipEntry.getName();
                 File newFile = new File(filePath);
+                System.out.println("Extracting: " + newFile.getPath()); // Debugging print statement
 
                 if (zipEntry.isDirectory()) {
-                    // If the entry is a directory, attempt to create it along with any necessary parent directories
+                    // If the ZIP entry is a directory, then attempt to create it
                     if (!newFile.isDirectory() && !newFile.mkdirs()) {
                         throw new IOException("Failed to create directory " + newFile);
                     }
                 } else {
-                    // If the entry is a file, ensure parent directories are created
+                    // If the ZIP entry is a file, make sure parent directories are created
                     File parent = newFile.getParentFile();
                     if (!parent.isDirectory() && !parent.mkdirs()) {
                         throw new IOException("Failed to create directory " + parent);
                     }
 
-                    // Extract the file's contents
+                    // Extract the file's contents to  specified location
+                    // Contents are written from ZipInputStream to a FileOutputStream
                     try (FileOutputStream fileOutStream = new FileOutputStream(newFile)) {
-                        byte[] buffer = new byte[1024];
+                        byte[] buffer = new byte[4096];
                         int len;
                         while ((len = zipInStream.read(buffer)) > 0) {
                             fileOutStream.write(buffer, 0, len);
                         }
                     }
                 }
-                zipInStream.closeEntry(); // Ensure the current ZIP entry is closed
+                // Close current ZIP entry and proceed to next
+                zipInStream.closeEntry();
+                zipEntry = zipInStream.getNextEntry();
             }
         } catch (IOException exception) {
-            // Handle any IOExceptions encountered during extraction
             exception.printStackTrace();
         }
     }

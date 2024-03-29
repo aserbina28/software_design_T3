@@ -5,10 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfe4806-e4d5-4d81-96e5-2a46e794569d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/software-design-vu-2024.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/software-design-vu-2024.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/software-design-vu-2024.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/8/08678bc19bec66c144ee84ec5abd168eab157c82" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f090ea3a3c5056f755976caa8fb11044802fde8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/409f52645489d9db2c50cc220760c538107aee0d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a051e1d2bc7ebc53cbc9d93d4c1db52fd5ed2e22" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce9749def318957b2570828d2a78f74cf94fa674" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6f5fd28a0dc23b97797319b2395897cbd04206a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff5b087a580e73108f34971b9f80a44dedf50f46" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/8/08678bc19bec66c144ee84ec5abd168eab157c82" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0f090ea3a3c5056f755976caa8fb11044802fde8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/0/409f52645489d9db2c50cc220760c538107aee0d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/0/a051e1d2bc7ebc53cbc9d93d4c1db52fd5ed2e22" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/e/ce9749def318957b2570828d2a78f74cf94fa674" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/6/f6f5fd28a0dc23b97797319b2395897cbd04206a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/f/ff5b087a580e73108f34971b9f80a44dedf50f46" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Metadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Metadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Lz4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Lz4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/compressionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/compressionStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +70,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -57,28 +84,37 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2c4pDZSLpNNryrEfP1ALzQELnrl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build software_design_T3.executor": "Run",
+    "Gradle.software_design_T3 [:Main.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "jacob",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/minifridgejr/Documents/SoftwareDesign/software_design_T3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-15.0.10-azul-15.0.10-4caba194b151-3b0166d7" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-396cc1b2" />
       </set>
     </attachedChunks>
   </component>
@@ -90,8 +126,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707380587205</updated>
+      <workItem from="1711712640325" duration="5691000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

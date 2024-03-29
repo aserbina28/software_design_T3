@@ -1,11 +1,10 @@
 package nl.vu.cs.softwaredesign;
-import java.util.Collection;
 
 public abstract class compressionStrategy {
     protected int compressionLevel;
 
     // Implementation in subclasses
-    public abstract Archive compress(Collection<?> collection);
+    public abstract Archive compress(nl.vu.cs.softwaredesign.Collection collection);
     // Implementation in subclasses
     public abstract void extractContents(Archive archive, String destination);
 

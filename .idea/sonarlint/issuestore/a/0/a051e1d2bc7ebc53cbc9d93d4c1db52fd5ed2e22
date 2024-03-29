@@ -1,0 +1,16 @@
+
+`	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(äğœ±ûÿÿÿÿ
+o
+java:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤Ìƒë
+‹
+java:S1319."pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(©Ñıÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(™ØœÍ
+N
+java:S1117"8Rename "size" which hides the field declared at line 10.(ƒÚÓĞ
+V	java:S125 "<This block of commented-out lines of code should be removed.(í‚Ã’ùÿÿÿÿ
+Q	java:S1254"<This block of commented-out lines of code should be removed.(ûÑÁ‰
+=
+java:S1068
+"(Remove this unused "size" private field.(‰öÆ)

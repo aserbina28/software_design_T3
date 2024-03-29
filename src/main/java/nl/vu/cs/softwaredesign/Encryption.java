@@ -1,42 +1,59 @@
-import javax.crypto;
-import java.io.File;
-public class Encryption{
+import javax.crypto.*;
+import javax.crypto.spec.*;
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Encryption {
 
     private static Encryption instance;
-    private static Map<Integer, String> archivesToPasswords = new HashMap<>();
+    private Map<Integer, String> archivesToPasswords;
 
     private Encryption() {
-    }//edit
+        archivesToPasswords = new HashMap<>();
+    }
 
     public static Encryption getInstance() {
         if (instance == null) {
             instance = new Encryption();
         }
         return instance;
-    }//singleton design pattern
+    }
 
-    public void update(int archiveId, String password){
+    public void update(int archiveId, String password) {
         archivesToPasswords.put(archiveId, password);
-    }//integrate it with another method
-
-    public boolean validatePassword(int archiveId, String password){
-        return archivesToPasswords.get(archiveId).equals(password);
     }
 
-    public static void encrypt(String key, File inputFile, File outputFile)
+    public boolean validatePassword(int archiveId, String password) {
+        return archivesToPasswords.containsKey(archiveId) && archivesToPasswords.get(archiveId).equals(password);
+    }
+
+    public void encrypt(int archiveId, String password, File inputFile, File outputFile)
             throws CryptoException {
-        doCrypto(Cipher.ENCRYPT_MODE, key, inputFile, outputFile);
+        doCrypto(Cipher.ENCRYPT_MODE, password, inputFile, outputFile);
+        update(archiveId, password);
     }
 
-    public static void decrypt(String key, File inputFile, File outputFile)
+    public void decrypt(int archiveId, String password, File inputFile, File outputFile)
             throws CryptoException {
-        doCrypto(Cipher.DECRYPT_MODE, key, inputFile, outputFile);
+        if (!validatePassword(archiveId, password)) {
+            throw new CryptoException("Invalid password for archive " + archiveId);
+        }
+        doCrypto(Cipher.DECRYPT_MODE, password, inputFile, outputFile);
+        // If decryption is successful, remove the entry from the map
+        archivesToPasswords.remove(archiveId);
     }
-    private static void doCrypto(int cipherMode, String key, File inputFile,
-                                 File outputFile) throws CryptoException {
+
+    private void doCrypto(int cipherMode, String password, File inputFile,
+                          File outputFile) throws CryptoException {
         try {
-            Key secretKey = new SecretKeySpec(key.getBytes(), ALGORITHM);
-            Cipher cipher = Cipher.getInstance(TRANSFORMATION);
+            // Derive a key from the password using a key derivation function (e.g., PBKDF2)
+            SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
+            KeySpec spec = new PBEKeySpec(password.toCharArray());
+            SecretKey tmp = factory.generateSecret(spec);
+            SecretKey secretKey = new SecretKeySpec(tmp.getEncoded(), "AES");
+
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipher.init(cipherMode, secretKey);
 
             FileInputStream inputStream = new FileInputStream(inputFile);
@@ -53,8 +70,8 @@ public class Encryption{
 
         } catch (NoSuchPaddingException | NoSuchAlgorithmException
                  | InvalidKeyException | BadPaddingException
-                 | IllegalBlockSizeException | IOException ex) {
+                 | IllegalBlockSizeException | IOException | InvalidKeySpecException ex) {
             throw new CryptoException("Error encrypting/decrypting file", ex);
         }
-    }//need to figure out where to generate secretKey
+    }
 }

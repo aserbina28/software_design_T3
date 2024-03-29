@@ -1,17 +1,19 @@
 package nl.vu.cs.softwaredesign;
 
+import java.util.ArrayList;
+
 public class Archive {
-    private Collection contents;
+    //private Collection contents;
     private double dateCreated;
     private int compressedSize;
-    boolean isEncrypted = true;
-    //private ArrayList<Metadata> metadataList;
+    private boolean isEncrypted = true;
+    private ArrayList<Metadata> metadataList;
 
-    public Archive(Collection collect){
-        this.contents = collect;
+    public Archive(ArrayList<Metadata> mList){
+        //this.contents = collect;
         this.dateCreated = System.currentTimeMillis();
         isEncrypted = false;
-        //this.metadataList = collect.getMetaData();
+        this.metadataList = mList;
     }
 
     public void setEncrypted(boolean encrypted){
@@ -23,11 +25,7 @@ public class Archive {
 //        return new Collection;
 //    }
 
-    public String previewContents(){
-        String print = "";
-        for(Metadata m : contents.getMetaData()){
-            print += "[" + m.getName() + ", " + String.valueOf(m.getByteSize()) + "],";
-        }
-        return print;
+    public ArrayList<Metadata> previewContents(){
+        return metadataList;
     }
 }

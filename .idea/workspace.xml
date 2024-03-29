@@ -7,6 +7,8 @@
     <list default="true" id="3bfe4806-e4d5-4d81-96e5-2a46e794569d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Metadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Metadata.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "luca__collection",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/minifridgejr/Documents/SoftwareDesign/software_design_T3",
     "project.structure.last.edited": "Project",

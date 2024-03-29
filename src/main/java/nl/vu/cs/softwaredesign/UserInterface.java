@@ -40,8 +40,7 @@ public class UserInterface {
 
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
-        //ui.interpretInput(input);
-        ui.selectFiles();
+        ui.interpretInput(input);
     }
 
     private void interpretInput(String input) {
@@ -75,27 +74,64 @@ public class UserInterface {
         }
     }
 
-    private void selectFiles() {
+    private File[] selectFiles() {
         JFileChooser fileChooser = new JFileChooser();
+
         fileChooser.setMultiSelectionEnabled(true);
 
         int result = fileChooser.showOpenDialog(null);
 
         if (result == JFileChooser.APPROVE_OPTION) {
             File[] selectedFiles = fileChooser.getSelectedFiles();
-            if (selectedFiles.length > 0) {
-                System.out.println("Selected files:");
-                for (File file : selectedFiles) {
-                    System.out.println(file.getAbsolutePath());
-                }
-            } else {
-                System.out.println("No files selected.");
-            }
+            return selectedFiles;
+        } else {
+            return null;
         }
     }
 
+    private String selectDirectory() {
+        JFileChooser fileChooser = new JFileChooser();
+
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+        int result = fileChooser.showSaveDialog(null);
+
+        // Process the selected directory
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedDirectory = fileChooser.getSelectedFile();
+            if (selectedDirectory != null) {
+                return selectedDirectory.getAbsolutePath();
+            }
+        }
+
+        return null;
+    }
+
     private void archive() {
-        System.out.println("archive");
+        UserInterface ui = UserInterface.getInstance();
+
+        System.out.println("Enter a name for your archive: ");
+        Scanner scan = new Scanner(System.in);
+        String input = scan.nextLine();
+
+        System.out.println("Select files to add to your archive.");
+        File[] filesToAdd = ui.selectFiles();
+        System.out.println(filesToAdd);
+
+        System.out.println("Select a destination directory.");
+        String destination = ui.selectDirectory();
+        System.out.println(destination);
+
+        System.out.println("Available compression formats are ZIP and LZ4.\n" +
+                "Enter 1 for ZIP or 2 for LZ4.");
+        input = scan.nextLine();
+        if (input.equals("1")) {
+            System.out.println("You chose ZIP");
+        } else if (input.equals("2")) {
+            System.out.println("You chose LZ4");
+        } else {
+            System.out.println("Invalid");
+        }
     }
     private void extract() {
         System.out.println("extract");

@@ -7,7 +7,7 @@ public abstract class compressionStrategy {
     // Implementation in subclasses
     public abstract Archive compress(Collection<?> collection);
     // Implementation in subclasses
-    public abstract void extractContents(String destination);
+    public abstract void extractContents(Archive archive, String destination);
 
     // Getter for compression level
     public int getCompressionLevel(int compressionLevel) {

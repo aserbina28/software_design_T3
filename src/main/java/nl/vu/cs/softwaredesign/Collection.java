@@ -7,22 +7,14 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.HashMap;
 public class Collection {
-    private int size;
     private HashMap<File, Metadata> fileMap = new HashMap<File, Metadata>();
-    public Collection(){
+    public Collection() {
         this.size = 0;
     }
 
-//    /**
-//     * Code sourced from baeldung.com
-//     * @param filename
-//     * @return
-//     */
-//    public Optional<String> getFileExtension(String filename) {
-//        return Optional.ofNullable(filename)
-//                .filter(f -> f.contains("."))
-//                .map(f -> f.substring(filename.lastIndexOf(".") + 1));
-//    }
+    public int getSize(){
+        return this.fileMap.size();
+    }
 
     public void add(File f){
         try {
@@ -50,10 +42,28 @@ public class Collection {
     }
 
 //    public Archive compress(CompressionStrategy c){
-//        //compresses file
-//
-//        return new Archive(this);
+//       return c.compress();
 //    }
+
+    public void extractToDirectory(File directory) {
+        if (!directory.exists()) {
+            throw new IllegalArgumentException("Provided directory does not exist.");
+        }
+        if (!directory.isDirectory()) {
+            throw new IllegalArgumentException("This path is not a directory.");
+        }
+
+        for (File file : new ArrayList<>(fileMap.keySet())) {
+            File destination = new File(directory, file.getName());
+            try {
+                Files.move(file.toPath(), destination.toPath());
+                Metadata metadata = fileMap.remove(file);
+                fileMap.put(destination, metadata);
+            } catch (IOException e) {
+                System.err.println("File move failed");
+            }
+        }
+    }
 
 
 }

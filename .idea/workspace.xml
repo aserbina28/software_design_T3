@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Metadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Metadata.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "luca__collection__compress",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/minifridgejr/Documents/SoftwareDesign/software_design_T3",
     "project.structure.last.edited": "Project",

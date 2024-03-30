@@ -85,6 +85,8 @@ public class Zip extends CompressionStrategy {
                 zipInStream.closeEntry();
                 zipEntry = zipInStream.getNextEntry();
             }
+
+            return
         } catch (IOException exception) {
             exception.printStackTrace();
         }

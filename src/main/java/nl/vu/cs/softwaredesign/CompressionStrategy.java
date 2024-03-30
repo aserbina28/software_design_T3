@@ -6,7 +6,7 @@ public abstract class CompressionStrategy {
     // Implementation in subclasses
     public abstract Archive compress(nl.vu.cs.softwaredesign.Collection collection);
     // Implementation in subclasses
-    public abstract void extractContents(Archive archive, String destination);
+    public abstract Collection decompress(Archive archive);
 
     // Getter for compression level
     public int getCompressionLevel(int compressionLevel) {

@@ -39,6 +39,14 @@ public class Collection {
         }
     }
 
+    public String toString(){
+        String output = "";
+        for(Metadata h : fileMap.values()){
+            output += ": " + h.getName() + " :";
+        }
+        return output;
+    }
+
     public void remove(File f) {
         fileMap.remove(f);
     }

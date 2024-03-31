@@ -50,11 +50,19 @@ public class Zip extends CompressionStrategy {
             ZipEntry entry = zipIn.getNextEntry();
 
             while (entry != null) {
-                File outputFile = new File(destination + entry.getName());
+                File outputFile = new File(destination, entry.getName());
                 if (!entry.isDirectory()) {
+                    // Ensure parent directories exist
+                    outputFile.getParentFile().mkdirs();
 
-                    extractFile(zipIn, outputFile);
-
+                    // Extract the file
+                    try (BufferedOutputStream byteOutStream = new BufferedOutputStream(new FileOutputStream(outputFile))) {
+                        byte[] bytesIn = new byte[4096];
+                        int read;
+                        while ((read = zipIn.read(bytesIn)) != -1) {
+                            byteOutStream.write(bytesIn, 0, read);
+                        }
+                    }
                 } else {
                     // Ensure directory is created
                     outputFile.mkdirs();
@@ -62,22 +70,8 @@ public class Zip extends CompressionStrategy {
                 zipIn.closeEntry();
                 entry = zipIn.getNextEntry();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException exception) {
+            exception.printStackTrace();
         }
     }
-
-    private void extractFile(ZipInputStream zipIn, File outputFile) {
-        outputFile.getParentFile().mkdirs(); // Ensure parent directories exist
-        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(outputFile))) {
-            byte[] bytesIn = new byte[4096];
-            int read;
-            while ((read = zipIn.read(bytesIn)) != -1) {
-                bos.write(bytesIn, 0, read);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 }

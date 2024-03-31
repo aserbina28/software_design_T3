@@ -2,7 +2,7 @@ package nl.vu.cs.softwaredesign;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -14,14 +14,13 @@ public class Zip extends CompressionStrategy {
     }
 
     @Override
-    public Archive compress(Collection collection) {
+    public void compress(HashMap<File, Metadata> fileMap, String destination) {
         try (ByteArrayOutputStream byteOutStream = new ByteArrayOutputStream();
              ZipOutputStream zipOutStream = new ZipOutputStream(byteOutStream)) {
 
             zipOutStream.setLevel(compressionLevel);
-            ArrayList<File> fileList = collection.getFiles();
 
-            for (File file : fileList) {
+            for (File file : fileMap.keySet()) {
                 ZipEntry entry = new ZipEntry(file.getName());
                 zipOutStream.putNextEntry(entry);
 
@@ -34,61 +33,52 @@ public class Zip extends CompressionStrategy {
             zipOutStream.finish();
             byte[] compressedData = byteOutStream.toByteArray();
 
-            return new Archive(compressedData, collection.getMetaData(), this);
+//            // Save compressed data to file
+//            try (FileOutputStream fos = new FileOutputStream(destination)) {
+//                fos.write(compressedData);
+//            }
 
         } catch (IOException exception) {
             exception.printStackTrace();
-            return null;
         }
     }
 
     //ZIP SHOULD HAVE DECOMPRESS THAT RETURNS A COLLECTION
     @Override
-    public Collection decompress(Archive archive) {
-        File destinationDirectory = new File();
-        if (!destinationDirectory.exists()) {
-            destinationDirectory.mkdirs();
-        }
+    public void decompress(byte[] compressedData, String destination) {
+        HashMap<File, Metadata> decompressedFileMap = new HashMap<>();
 
-        byte[] compressedData = archive.getCompressedData();
+        try (ZipInputStream zipIn = new ZipInputStream(new ByteArrayInputStream(compressedData))) {
+            ZipEntry entry = zipIn.getNextEntry();
 
-        try (ByteArrayInputStream byteInStream = new ByteArrayInputStream(compressedData);
-             ZipInputStream zipInStream = new ZipInputStream(byteInStream)) {
+            while (entry != null) {
+                File outputFile = new File(destination + entry.getName());
+                if (!entry.isDirectory()) {
 
-            ZipEntry zipEntry = zipInStream.getNextEntry();
-            while (zipEntry != null) {
-                String filePath = destination + File.separator + zipEntry.getName();
-                File newFile = new File(filePath);
-                System.out.println("Extracting: " + newFile.getPath());
+                    extractFile(zipIn, outputFile);
 
-                if (zipEntry.isDirectory()) {
-                    if (!newFile.isDirectory() && !newFile.mkdirs()) {
-                        throw new IOException("Failed to create directory " + newFile);
-                    }
                 } else {
-                    File parent = newFile.getParentFile();
-                    if (!parent.isDirectory() && !parent.mkdirs()) {
-                        throw new IOException("Failed to create directory " + parent);
-                    }
-
-                    try (FileOutputStream fileOutStream = new FileOutputStream(newFile)) {
-                        byte[] buffer = new byte[4096];
-                        int len;
-                        while ((len = zipInStream.read(buffer)) > 0) {
-                            fileOutStream.write(buffer, 0, len);
-                        }
-                    }
-                    //MAKE NEW COMPRESSION OBJECT AND ADD FILES TO IT
-//                    Collection c = new Collection;
-//                    c.add(File);
+                    // Ensure directory is created
+                    outputFile.mkdirs();
                 }
-                zipInStream.closeEntry();
-                zipEntry = zipInStream.getNextEntry();
+                zipIn.closeEntry();
+                entry = zipIn.getNextEntry();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-            return
-        } catch (IOException exception) {
-            exception.printStackTrace();
+    private void extractFile(ZipInputStream zipIn, File outputFile) {
+        outputFile.getParentFile().mkdirs(); // Ensure parent directories exist
+        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(outputFile))) {
+            byte[] bytesIn = new byte[4096];
+            int read;
+            while ((read = zipIn.read(bytesIn)) != -1) {
+                bos.write(bytesIn, 0, read);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

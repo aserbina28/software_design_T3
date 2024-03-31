@@ -1,13 +1,3 @@
 
-c
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(ιδΔΊϊÿÿÿÿ8ο€άθ1
-^
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(¦ΕιΧ8π€άθ1
-L	java:S106"+Replace this use of System.out by a logger.(±―ζΡϋÿÿÿÿ8π€άθ1
-L	java:S106"+Replace this use of System.out by a logger.(±―ζΡϋÿÿÿÿ8ρ€άθ1
-L	java:S106"+Replace this use of System.out by a logger.(±―ζΡϋÿÿÿÿ8ς€άθ1
-G	java:S106"+Replace this use of System.out by a logger.(ƒΣσ»8υ€άθ1
-c
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(σλρύÿÿÿÿ8σ€άθ1
-L	java:S106'"+Replace this use of System.out by a logger.(Ευ·ύÿÿÿÿ8υ€άθ1
-L	java:S106)"+Replace this use of System.out by a logger.(ώτ•ψÿÿÿÿ8Νƒάθ1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ηµν‘8βΨ¦ι1

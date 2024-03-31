@@ -5,95 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfe4806-e4d5-4d81-96e5-2a46e794569d" name="Changes" comment="most recent stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16c25f0bc70f19be79f374ab7668d77b7b242566" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21e12e8b971cd642eea5dbbffc38498188454e60" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24d236f5b968176eea3aea5af3ce735ac9676f4c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c590dcea49b4c03d83c909e009bce0e7066a8ad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41820b37cd43da533209b80f16b74084d5b2a0e8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c7593dce7fc24280c5bbeccaee21956209a9d78" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f84f18f05e5382017bd5cb65278a090033d2ce5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/60a41485f42ec20063b07ca586dd5c678722b54c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/65df7bfd3e286628a6ef57d51ec8b1ed9aa55095" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/701246817630bdad588f32e9ede8423b31c55c67" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/70d7a2c821e0a7f94f352bed8c60a40f7a123210" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/740c0db5fc6fa423c3ecbc61c895141a369f530a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/784440358247c94e9f0756597181f4e00215777a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78d31a7de2b38caa7c9e4f8dfed1951ceea3b8d6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/85ecd60611baae6768e6216eab23e0108f271e40" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8be112a41ed97bee477245eb233022d0df4cf2f5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/909762385fc6eb20f922a91c6865741308b57f2c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/955c9c36b6eac1c19379be0c0cf8b8a6b6fbb191" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae9ddf453f55affea2d6b9e3973cac1eb2efb4e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bbf202272a96de5cd6b6828ffdc55fb3ce45289c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3f3987e19a1d3c3c3aff46082dffb6009427ed2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c982467495ff46ed4e47e311b808f986802bdae8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cce845e7161d363b75ceb8ee54fd9c8cde52be4c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce57aec343ff2e7270cf8bbb5f852a15bdfc0ce2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d7c0661bfafce40e186c6ec8624faa4be3bb96dd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0e0f9cec86fe4b939ae22be5264c758801eb28f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f3042532e222ec2da93bd3ae992fd2014400ce6d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f91e26464c26d277fe794b35585d86afadb98bec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/6/16c25f0bc70f19be79f374ab7668d77b7b242566" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/1/21e12e8b971cd642eea5dbbffc38498188454e60" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/4/24d236f5b968176eea3aea5af3ce735ac9676f4c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/c/3c590dcea49b4c03d83c909e009bce0e7066a8ad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/1/41820b37cd43da533209b80f16b74084d5b2a0e8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4c7593dce7fc24280c5bbeccaee21956209a9d78" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/f/4f84f18f05e5382017bd5cb65278a090033d2ce5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/0/60a41485f42ec20063b07ca586dd5c678722b54c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/5/65df7bfd3e286628a6ef57d51ec8b1ed9aa55095" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/0/701246817630bdad588f32e9ede8423b31c55c67" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/0/70d7a2c821e0a7f94f352bed8c60a40f7a123210" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/4/740c0db5fc6fa423c3ecbc61c895141a369f530a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/8/784440358247c94e9f0756597181f4e00215777a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/8/78d31a7de2b38caa7c9e4f8dfed1951ceea3b8d6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/5/85ecd60611baae6768e6216eab23e0108f271e40" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/b/8be112a41ed97bee477245eb233022d0df4cf2f5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/0/909762385fc6eb20f922a91c6865741308b57f2c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/5/955c9c36b6eac1c19379be0c0cf8b8a6b6fbb191" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/e/ae9ddf453f55affea2d6b9e3973cac1eb2efb4e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/b/bbf202272a96de5cd6b6828ffdc55fb3ce45289c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/3/c3f3987e19a1d3c3c3aff46082dffb6009427ed2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/9/c982467495ff46ed4e47e311b808f986802bdae8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/c/cce845e7161d363b75ceb8ee54fd9c8cde52be4c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/e/ce57aec343ff2e7270cf8bbb5f852a15bdfc0ce2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/7/d7c0661bfafce40e186c6ec8624faa4be3bb96dd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f0e0f9cec86fe4b939ae22be5264c758801eb28f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/3/f3042532e222ec2da93bd3ae992fd2014400ce6d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/9/f91e26464c26d277fe794b35585d86afadb98bec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/8/08678bc19bec66c144ee84ec5abd168eab157c82" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/8/08678bc19bec66c144ee84ec5abd168eab157c82" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f090ea3a3c5056f755976caa8fb11044802fde8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f090ea3a3c5056f755976caa8fb11044802fde8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a051e1d2bc7ebc53cbc9d93d4c1db52fd5ed2e22" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a051e1d2bc7ebc53cbc9d93d4c1db52fd5ed2e22" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6f5fd28a0dc23b97797319b2395897cbd04206a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6f5fd28a0dc23b97797319b2395897cbd04206a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Archive.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Archive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Collection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Collection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Zip.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Zip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/compressionStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/compressionStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extr/compressed.zip" beforeDir="false" afterPath="$PROJECT_DIR$/extr/compressed.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/compressionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/CompressionStrategy.java" afterDir="false" />
     </list>
-    <list id="73c91c9b-6682-427e-bbea-19ed3e5b15e4" name="Changes by clachance" comment="" />
-    <list id="d7812fb4-3c2c-4245-ad9c-8c3dd4df9489" name="Changes by minifridgejr" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/compressionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/CompressionStrategy.java" afterDir="false" />
-    </list>
+    <list id="d7812fb4-3c2c-4245-ad9c-8c3dd4df9489" name="Changes by minifridgejr" comment="most recent" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,50 +53,23 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java">
-      <ranges>
-        <range start1="40" end1="40" start2="40" end2="48" changelist="d7812fb4-3c2c-4245-ad9c-8c3dd4df9489" />
-        <range start1="51" end1="56" start2="59" end2="62" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="57" end1="57" start2="63" end2="73" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java">
-      <ranges>
-        <range start1="9" end1="10" start2="9" end2="10" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="11" end1="12" start2="11" end2="11" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="16" end1="17" start2="15" end2="15" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="18" end1="20" start2="16" end2="17" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="23" end1="24" start2="20" end2="20" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="25" end1="25" start2="21" end2="22" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="26" end1="32" start2="23" end2="25" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="34" end1="36" start2="27" end2="27" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="39" end1="40" start2="30" end2="30" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="43" end1="44" start2="33" end2="33" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="47" end1="50" start2="36" end2="37" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="57" end1="58" start2="44" end2="45" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="59" end1="63" start2="46" end2="48" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="67" end1="68" start2="52" end2="52" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="70" end1="73" start2="54" end2="54" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="76" end1="77" start2="57" end2="57" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="79" end1="80" start2="59" end2="59" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="82" end1="83" start2="61" end2="62" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="85" end1="86" start2="64" end2="64" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="90" end1="91" start2="68" end2="68" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="96" end1="98" start2="73" end2="73" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="105" end1="105" start2="80" end2="83" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="106" end1="107" start2="84" end2="84" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="110" end1="110" start2="87" end2="89" changelist="d7812fb4-3c2c-4245-ad9c-8c3dd4df9489" />
-        <range start1="114" end1="114" start2="93" end2="94" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="115" end1="116" start2="95" end2="95" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/CompressionStrategy.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="3" changelist="3bfe4806-e4d5-4d81-96e5-2a46e794569d" />
-        <range start1="8" end1="9" start2="8" end2="9" changelist="d7812fb4-3c2c-4245-ad9c-8c3dd4df9489" />
-      </ranges>
-    </file>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2171022e-3b65-4e22-81ce-9065a6f69049" />
+        <option name="url" value="https://github.com/aserbina28/software_design_T3.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -203,6 +90,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;jacob&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/minifridgejr/Documents/SoftwareDesign/software_design_T3&quot;,
@@ -234,7 +122,25 @@
       <option name="presentableId" value="Default" />
       <updated>1707380587205</updated>
       <workItem from="1711712640325" duration="5691000" />
+      <workItem from="1711799882061" duration="791000" />
     </task>
+    <task id="LOCAL-00001" summary="most recent stuff">
+      <option name="closed" value="true" />
+      <created>1711738570871</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711738570871</updated>
+    </task>
+    <task id="LOCAL-00002" summary="most recent">
+      <option name="closed" value="true" />
+      <created>1711799937295</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711799937296</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +159,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="most recent stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="most recent stuff" />
+    <MESSAGE value="most recent" />
+    <option name="LAST_COMMIT_MESSAGE" value="most recent" />
   </component>
 </project>

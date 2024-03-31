@@ -33,20 +33,18 @@ public class Zip extends CompressionStrategy {
             zipOutStream.finish();
             byte[] compressedData = byteOutStream.toByteArray();
 
-//            // Save compressed data to file
-//            try (FileOutputStream fos = new FileOutputStream(destination)) {
-//                fos.write(compressedData);
-//            }
+            // Save compressed data to file
+            try (FileOutputStream fos = new FileOutputStream(destination)) {
+                fos.write(compressedData);
+            }
 
         } catch (IOException exception) {
             exception.printStackTrace();
         }
     }
 
-    //ZIP SHOULD HAVE DECOMPRESS THAT RETURNS A COLLECTION
     @Override
     public void decompress(byte[] compressedData, String destination) {
-        HashMap<File, Metadata> decompressedFileMap = new HashMap<>();
 
         try (ZipInputStream zipIn = new ZipInputStream(new ByteArrayInputStream(compressedData))) {
             ZipEntry entry = zipIn.getNextEntry();

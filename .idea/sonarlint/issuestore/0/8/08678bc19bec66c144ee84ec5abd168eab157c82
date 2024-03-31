@@ -1,0 +1,16 @@
+
+g	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Æœò£é1
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(äğœ±ûÿÿÿÿ8Èœò£é1
+
+java:S1319<"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(èÖ¯8Éœò£é1
+9
+java:S1643C"Use a StringBuilder instead.(ÊğŸ«8Êœò£é1
+X	java:S125"<This block of commented-out lines of code should be removed.(ã†ÌÏ8áœò£é1
+]	java:S125("<This block of commented-out lines of code should be removed.(í‚Ã’ùÿÿÿÿ8íœò£é1
+Q
+java:S1068"/Remove this unused "dateCreated" private field.(ã¦†àüÿÿÿÿ8ùœò£é1
+T
+java:S1068"2Remove this unused "compressedSize" private field.(Œôáïıÿÿÿÿ8ùœò£é1
+L
+java:S1068"/Remove this unused "isEncrypted" private field.(»¿•ß8úœò£é1

@@ -18,16 +18,16 @@ public class Zip extends CompressionStrategy {
         try (ByteArrayOutputStream byOutstr = new ByteArrayOutputStream();
              ZipOutputStream zipOutsr = new ZipOutputStream(byOutstr)) {
 
-            zipOutStream.setLevel(compressionLevel);
+            zipOutsr.setLevel(compressionLevel);
 
             for (File file : fileMap.keySet()) {
                 ZipEntry entry = new ZipEntry(file.getName());
-                zipOutStream.putNextEntry(entry);
+                zipOutsr.putNextEntry(entry);
 
                 byte[] fileBytes = Files.readAllBytes(file.toPath());
-                zipOutStream.write(fileBytes);
+                zipOutsr.write(fileBytes);
 
-                zipOutStream.closeEntry();
+                zipOutsr.closeEntry();
             }
 
             zipOutsr.finish();
@@ -50,8 +50,8 @@ public class Zip extends CompressionStrategy {
     @Override
     public void decompress(byte[] compressedData, String destination) {
 
-        try (ZipInputStream zipIn = new ZipInputStream(new ByteArrayInputStream(compressedData))) {
-            ZipEntry entry = zipIn.getNextEntry();
+        try (ZipInputStream zipInStr = new ZipInputStream(new ByteArrayInputStream(compressedData))) {
+            ZipEntry entry = zipInStr.getNextEntry();
 
             while (entry != null) {
                 File outputFile = new File(destination, entry.getName());
@@ -61,15 +61,15 @@ public class Zip extends CompressionStrategy {
                     try (BufferedOutputStream byteOutStream = new BufferedOutputStream(new FileOutputStream(outputFile))) {
                         byte[] bytesIn = new byte[4096];
                         int read;
-                        while ((read = zipIn.read(bytesIn)) != -1) {
+                        while ((read = zipInStr.read(bytesIn)) != -1) {
                             byteOutStream.write(bytesIn, 0, read);
                         }
                     }
                 } else {
                     outputFile.mkdirs();
                 }
-                zipIn.closeEntry();
-                entry = zipIn.getNextEntry();
+                zipInStr.closeEntry();
+                entry = zipInStr.getNextEntry();
             }
         } catch (IOException exception) {
             exception.printStackTrace();

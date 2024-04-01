@@ -1,0 +1,161 @@
+Index: src/main/java/nl/vu/cs/softwaredesign/UserInterface.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package nl.vu.cs.softwaredesign;\n\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Scanner;\nimport java.awt.FileDialog;\nimport java.awt.Frame;\n\nimport javax.swing.JFileChooser;\nimport javax.swing.filechooser.FileNameExtensionFilter;\nimport java.io.File;\n\npublic class UserInterface {\n    private static UserInterface instance;\n    // private List<> archives = new ArrayList<>();\n\n    private enum Command {\n        ARCHIVE,\n        EXTRACT,\n        PREVIEW,\n        ENCRYPT\n    }\n\n    // private constructor to ensure only one instance created\n    private UserInterface() {}\n\n    public static UserInterface getInstance() {\n        if (instance == null) {\n            instance = new UserInterface();\n        }\n        return instance;\n    }\n\n    public static void main(String[] args) {\n        UserInterface ui = UserInterface.getInstance();\n\n        System.out.println(\"Welcome to Team 3's File Archiver!\");\n        System.out.println(\"Enter a command to start.\");\n        System.out.println(\"(Available commands: archive, extract, preview, encrypt)\");\n\n        Scanner scan = new Scanner(System.in);\n        String input = scan.nextLine();\n        ui.interpretInput(input);\n    }\n\n    private void interpretInput(String input) {\n        String[] words = input.split(\"\\\\s+\");\n\n        Command command;\n\n        try {\n            command = Command.valueOf(words[0].toUpperCase());\n        }\n        catch (Exception e) {\n            System.out.println(\"Invalid command.\");\n            command = null;\n        }\n\n        if (command != null) {\n            switch(command) {\n                case ARCHIVE:\n                    archive();\n                    break;\n                case EXTRACT:\n                    extract();\n                    break;\n                case PREVIEW:\n                    preview();\n                    break;\n                case ENCRYPT:\n                    encrypt();\n                    break;\n            }\n        }\n    }\n\n    private File[] selectFiles() {\n        JFileChooser fileChooser = new JFileChooser();\n\n        fileChooser.setMultiSelectionEnabled(true);\n\n        int result = fileChooser.showOpenDialog(null);\n\n        if (result == JFileChooser.APPROVE_OPTION) {\n            File[] selectedFiles = fileChooser.getSelectedFiles();\n            return selectedFiles;\n        } else {\n            return null;\n        }\n    }\n\n    private String selectDirectory() {\n        JFileChooser fileChooser = new JFileChooser();\n\n        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);\n\n        int result = fileChooser.showSaveDialog(null);\n\n        // Process the selected directory\n        if (result == JFileChooser.APPROVE_OPTION) {\n            File selectedDirectory = fileChooser.getSelectedFile();\n            if (selectedDirectory != null) {\n                return selectedDirectory.getAbsolutePath();\n            }\n        }\n\n        return null;\n    }\n\n    private void archive() {\n        UserInterface ui = UserInterface.getInstance();\n\n        System.out.println(\"Enter a name for your archive: \");\n        Scanner scan = new Scanner(System.in);\n        String input = scan.nextLine();\n\n        System.out.println(\"Select files to add to your archive.\");\n        File[] filesToAdd = ui.selectFiles();\n        System.out.println(filesToAdd);\n\n        System.out.println(\"Select a destination directory.\");\n        String destination = ui.selectDirectory();\n        System.out.println(destination);\n\n        System.out.println(\"Available compression formats are ZIP and LZ4.\\n\" +\n                \"Enter 1 for ZIP or 2 for LZ4.\");\n        input = scan.nextLine();\n        if (input.equals(\"1\")) {\n            System.out.println(\"You chose ZIP\");\n        } else if (input.equals(\"2\")) {\n            System.out.println(\"You chose LZ4\");\n        } else {\n            System.out.println(\"Invalid\");\n        }\n    }\n    private void extract() {\n        System.out.println(\"extract\");\n    }\n    private void preview() {\n        System.out.println(\"preview\");\n    }\n    private void encrypt() {\n        System.out.println((\"encrypt\"));\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java b/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java
+--- a/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java	(revision a80dcfae5cba06ad06f51fff71b99e5d9a3187f7)
++++ b/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java	(date 1711729778737)
+@@ -12,7 +12,7 @@
+ 
+ public class UserInterface {
+     private static UserInterface instance;
+-    // private List<> archives = new ArrayList<>();
++    ArrayList<String> arrayList = new ArrayList<>();
+ 
+     private enum Command {
+         ARCHIVE,
+@@ -84,9 +84,9 @@
+         if (result == JFileChooser.APPROVE_OPTION) {
+             File[] selectedFiles = fileChooser.getSelectedFiles();
+             return selectedFiles;
+-        } else {
+-            return null;
+-        }
++        }
++
++        return null;
+     }
+ 
+     private String selectDirectory() {
+@@ -96,7 +96,6 @@
+ 
+         int result = fileChooser.showSaveDialog(null);
+ 
+-        // Process the selected directory
+         if (result == JFileChooser.APPROVE_OPTION) {
+             File selectedDirectory = fileChooser.getSelectedFile();
+             if (selectedDirectory != null) {
+@@ -118,6 +117,13 @@
+         File[] filesToAdd = ui.selectFiles();
+         System.out.println(filesToAdd);
+ 
++        // make collection?
++
++        Collection collection = new Collection();
++        for (File file : filesToAdd) {
++            collection.add(file);
++        }
++
+         System.out.println("Select a destination directory.");
+         String destination = ui.selectDirectory();
+         System.out.println(destination);
+@@ -137,10 +143,19 @@
+         System.out.println("extract");
+     }
+     private void preview() {
+-        System.out.println("preview");
++        System.out.println("Enter the archive name: ");
++        Scanner scan = new Scanner(System.in);
++        String input = scan.nextLine();
+     }
+     private void encrypt() {
+-        System.out.println(("encrypt"));
++        System.out.println("Enter the archive name: ");
++        Scanner scan = new Scanner(System.in);
++        String input = scan.nextLine();
++
++        System.out.println("Enter your desired password (please note " +
++                "this will be needed to decrypt your archive): ");
++        input = scan.nextLine();
++
+     }
+ 
+ 
+Index: build/tmp/compileJava/source-classes-mapping.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>nl/vu/cs/softwaredesign/UserInterface.java\n nl.vu.cs.softwaredesign.UserInterface\n nl.vu.cs.softwaredesign.UserInterface$1\n nl.vu.cs.softwaredesign.UserInterface$Command\nnl/vu/cs/softwaredesign/Main.java\n nl.vu.cs.softwaredesign.Main\nnl/vu/cs/softwaredesign/Archive.java\n nl.vu.cs.softwaredesign.Archive\nnl/vu/cs/softwaredesign/Collection.java\n nl.vu.cs.softwaredesign.Collection\nnl/vu/cs/softwaredesign/Metadata.java\n nl.vu.cs.softwaredesign.Metadata\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build/tmp/compileJava/source-classes-mapping.txt b/build/tmp/compileJava/source-classes-mapping.txt
+--- a/build/tmp/compileJava/source-classes-mapping.txt	(revision a80dcfae5cba06ad06f51fff71b99e5d9a3187f7)
++++ b/build/tmp/compileJava/source-classes-mapping.txt	(date 1711729555322)
+@@ -1,12 +1,12 @@
++nl/vu/cs/softwaredesign/Metadata.java
++ nl.vu.cs.softwaredesign.Metadata
++nl/vu/cs/softwaredesign/Collection.java
++ nl.vu.cs.softwaredesign.Collection
++nl/vu/cs/softwaredesign/Archive.java
++ nl.vu.cs.softwaredesign.Archive
+ nl/vu/cs/softwaredesign/UserInterface.java
+  nl.vu.cs.softwaredesign.UserInterface
+  nl.vu.cs.softwaredesign.UserInterface$1
+  nl.vu.cs.softwaredesign.UserInterface$Command
+ nl/vu/cs/softwaredesign/Main.java
+  nl.vu.cs.softwaredesign.Main
+-nl/vu/cs/softwaredesign/Archive.java
+- nl.vu.cs.softwaredesign.Archive
+-nl/vu/cs/softwaredesign/Collection.java
+- nl.vu.cs.softwaredesign.Collection
+-nl/vu/cs/softwaredesign/Metadata.java
+- nl.vu.cs.softwaredesign.Metadata
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"ee32cf31-fc5a-4d9d-9036-181af24d1f7e\" name=\"Changes\" comment=\"I'm confused\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <projects_view>\n          <tree_state>\n            <expand />\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"charlee/test\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"KEEP\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;charleelachance&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"aa7fcab8-da16-44ac-b924-a07679179e45\" />\n        <option name=\"url\" value=\"https://github.com/aserbina28/software_design_T3.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 2\n}</component>\n  <component name=\"ProjectId\" id=\"2c4ozBEeOeT2u8DLTzn5fyXHzlO\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;Gradle.software_design_T3 [:Main.main()].executor&quot;: &quot;Run&quot;,\n    &quot;Gradle.software_design_T3 [:UserInterface.main()].executor&quot;: &quot;Run&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;charlee-ui&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"jdk-11.0.22-temurin-11.0.22-4caba194b151-2ca77462\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"ee32cf31-fc5a-4d9d-9036-181af24d1f7e\" name=\"Changes\" comment=\"\" />\n      <created>1707380472752</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1707380472752</updated>\n      <workItem from=\"1707380474059\" duration=\"640000\" />\n      <workItem from=\"1707381120064\" duration=\"3027000\" />\n      <workItem from=\"1710255341507\" duration=\"28000\" />\n      <workItem from=\"1710255376809\" duration=\"1366000\" />\n      <workItem from=\"1710416466933\" duration=\"318000\" />\n      <workItem from=\"1710416790677\" duration=\"3249000\" />\n      <workItem from=\"1711375391943\" duration=\"6489000\" />\n      <workItem from=\"1711470039046\" duration=\"5339000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Test\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1710256124348</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1710256124348</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Continued adding logic, figured out how to select through popup window\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1711470638702</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711470638702</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"I'm confused\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1711718658238</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711718658239</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"I'm confused\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1711718686779</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711718686779</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"5\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Test\" />\n    <MESSAGE value=\"Continued adding logic, figured out how to select through popup window\" />\n    <MESSAGE value=\"I'm confused\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"I'm confused\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a80dcfae5cba06ad06f51fff71b99e5d9a3187f7)
++++ b/.idea/workspace.xml	(date 1711912368578)
+@@ -4,7 +4,19 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" name="Changes" comment="I'm confused" />
++    <list default="true" id="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" name="Changes" comment="I'm confused">
++      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/classAnalysis.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/javaCompile.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -142,7 +154,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1711718686779</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="I'm confused">
++      <option name="closed" value="true" />
++      <created>1711719038178</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1711719038178</updated>
++    </task>
++    <task id="LOCAL-00006" summary="I'm confused">
++      <option name="closed" value="true" />
++      <created>1711719109356</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1711719109356</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">

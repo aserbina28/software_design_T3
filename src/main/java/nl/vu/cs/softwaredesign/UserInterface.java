@@ -18,7 +18,8 @@ public class UserInterface {
         ARCHIVE,
         EXTRACT,
         PREVIEW,
-        ENCRYPT
+        ENCRYPT,
+        DECRYPT
     }
 
     // private constructor to ensure only one instance created
@@ -77,6 +78,9 @@ public class UserInterface {
                     break;
                 case ENCRYPT:
                     encrypt();
+                    break;
+                case DECRYPT:
+                    decrypt();
                     break;
             }
         }

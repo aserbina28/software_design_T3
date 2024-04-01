@@ -8,19 +8,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Archive {
-    //private Collection contents;
     private byte[] compressedData; // store compressed data
     private double dateCreated;
-    private int compressedSize;
     private HashMap<File, Metadata> fileMap = new HashMap<File, Metadata>();
-    private boolean isEncrypted = true;
+    private boolean isEncrypted = false;
     private CompressionStrategy compressor;
 
 
     public Archive() {
         this.dateCreated = System.currentTimeMillis();
     }
-
     public byte[] getCompressedData() {
         return compressedData;
     }
@@ -34,7 +31,6 @@ public class Archive {
             BasicFileAttributes fileAttr = Files.readAttributes(f.toPath(), BasicFileAttributes.class);
             long size = fileAttr.size();
             String name = f.getName();
-            //Optional<String> type = getFileExtension(name);
 
             Metadata m = new Metadata(name, size);
             fileMap.put(f, m);
@@ -42,10 +38,6 @@ public class Archive {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public void remove(File f){
-        fileMap.remove(f);
     }
     public void compress(CompressionStrategy c, String destination){
         this.compressor = c;

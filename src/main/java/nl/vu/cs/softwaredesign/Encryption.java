@@ -55,10 +55,8 @@ public class Encryption {
         if (!Arrays.equals(salt, storedSalt)) {
             return false; // Salt mismatch
         }
-
-        // Generate salt from provided password and compare it with stored salt
         byte[] generatedSalt = generateSalt(password, SALT_LENGTH);
-        //System.out.println("Generate salt: " + Arrays.toString(generatedSalt));
+
         return Arrays.equals(storedSalt, generatedSalt);
     }
 
@@ -91,7 +89,6 @@ public class Encryption {
     }
 
 
-    // Inside doCrypto method
     private void doCrypto(int cipherMode, String password, byte[] salt, File inputFile,
                           File outputFile) throws CryptoException {
         try {
@@ -102,9 +99,9 @@ public class Encryption {
 
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
 
-            // Generate a random IV
+            // Generates random IV
             byte[] iv = new byte[cipher.getBlockSize()];
-            System.arraycopy(salt, 0, iv, 0, iv.length); // Use the first 16 bytes of the salt as IV
+            System.arraycopy(salt, 0, iv, 0, iv.length); // Uses first 16 bytes of  salt as IV
             IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
 
             cipher.init(cipherMode, secretKey, ivParameterSpec);
@@ -130,19 +127,14 @@ public class Encryption {
 
     private byte[] generateSalt(String password, int length) {
         try {
-            // Use SHA-256 hash function
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
 
-            // Hash the password bytes
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] passwordBytes = password.getBytes();
             byte[] hash = digest.digest(passwordBytes);
-
-            // Truncate or extend the hash to the desired salt length
             byte[] salt = new byte[length];
             System.arraycopy(hash, 0, salt, 0, Math.min(hash.length, length));
             return salt;
         } catch (NoSuchAlgorithmException e) {
-            // Handle NoSuchAlgorithmException
             e.printStackTrace();
             return null;
         }

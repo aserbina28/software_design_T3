@@ -4,17 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bfe4806-e4d5-4d81-96e5-2a46e794569d" name="Changes" comment="most recent stuff">
+    <list default="true" id="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" name="Changes" comment="I'm confused">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Archive.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Archive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Collection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface$Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface$Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Zip.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/Zip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/compressionStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nl/vu/cs/softwaredesign/compressionStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Collection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/CompressionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/CompressionStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/CryptoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/CryptoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Encryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Encryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Lz4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Lz4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" afterDir="false" />
     </list>
-    <list id="d7812fb4-3c2c-4245-ad9c-8c3dd4df9489" name="Changes by minifridgejr" comment="most recent" />
+    <list id="b6a08c08-9d3e-434f-b6da-c891b312c0a4" name="Changes by minifridgejr" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Encryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Encryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -48,28 +80,108 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="charlee/test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
-    {
-      "state": "OPEN"
-    }
-  ],
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;charleelachance&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="2171022e-3b65-4e22-81ce-9065a6f69049" />
+        <option name="accountId" value="aa7fcab8-da16-44ac-b924-a07679179e45" />
         <option name="url" value="https://github.com/aserbina28/software_design_T3.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Zip.java">
+      <ranges>
+        <range start1="16" end1="19" start2="16" end2="19" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="20" end1="21" start2="20" end2="21" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="24" end1="25" start2="24" end2="25" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="27" end1="28" start2="27" end2="28" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="29" end1="30" start2="29" end2="30" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="32" end1="34" start2="32" end2="34" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="35" end1="37" start2="35" end2="39" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="39" end1="39" start2="41" end2="42" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="43" end1="43" start2="46" end2="47" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="48" end1="50" start2="52" end2="54" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="54" end1="55" start2="58" end2="58" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="57" end1="58" start2="60" end2="60" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="61" end1="62" start2="63" end2="64" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="66" end1="67" start2="68" end2="68" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="69" end1="71" start2="70" end2="72" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Encryption.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="2" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="33" end1="34" start2="35" end2="36" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="35" end1="37" start2="37" end2="39" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="45" end1="48" start2="47" end2="49" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="50" end1="54" start2="51" end2="52" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="55" end1="57" start2="53" end2="54" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="60" end1="62" start2="57" end2="57" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="63" end1="64" start2="58" end2="59" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="68" end1="68" start2="63" end2="64" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="69" end1="71" start2="65" end2="65" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="73" end1="74" start2="67" end2="68" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="76" end1="82" start2="70" end2="76" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="83" end1="88" start2="77" end2="80" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="89" end1="90" start2="81" end2="82" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="91" end1="94" start2="83" end2="88" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="97" end1="98" start2="91" end2="91" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="108" end1="109" start2="101" end2="102" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="110" end1="111" start2="103" end2="104" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="136" end1="137" start2="129" end2="130" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="138" end1="140" start2="131" end2="131" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="142" end1="144" start2="133" end2="133" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="148" end1="149" start2="137" end2="137" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/UserInterface.java">
+      <ranges>
+        <range start1="14" end1="15" start2="14" end2="15" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="20" end1="21" start2="20" end2="22" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="33" end1="34" start2="34" end2="35" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="37" end1="38" start2="38" end2="38" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="40" end1="40" start2="40" end2="41" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="45" end1="46" start2="46" end2="55" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="72" end1="72" start2="81" end2="84" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="86" end1="89" start2="98" end2="101" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="98" end1="99" start2="110" end2="110" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="109" end1="110" start2="120" end2="121" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="111" end1="113" start2="122" end2="122" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="114" end1="115" start2="123" end2="123" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="124" end1="133" start2="132" end2="140" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="134" end1="134" start2="141" end2="146" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="135" end1="135" start2="147" end2="176" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="136" end1="137" start2="177" end2="181" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="138" end1="138" start2="182" end2="184" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="139" end1="140" start2="185" end2="186" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="141" end1="144" start2="187" end2="217" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/nl/vu/cs/softwaredesign/Archive.java">
+      <ranges>
+        <range start1="10" end1="11" start2="10" end2="10" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="13" end1="14" start2="12" end2="12" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="15" end1="16" start2="13" end2="14" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="18" end1="21" start2="16" end2="18" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="22" end1="24" start2="19" end2="19" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+        <range start1="25" end1="26" start2="20" end2="20" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="39" end1="40" start2="33" end2="33" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="48" end1="52" start2="41" end2="41" changelist="b6a08c08-9d3e-434f-b6da-c891b312c0a4" />
+        <range start1="54" end1="55" start2="43" end2="44" changelist="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -77,7 +189,7 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2c4pDZSLpNNryrEfP1ALzQELnrl" />
+  <component name="ProjectId" id="2c4ozBEeOeT2u8DLTzn5fyXHzlO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -85,23 +197,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Gradle.Build software_design_T3.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.software_design_T3 [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.software_design_T3 [:UserInterface.main()].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;jacob&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;charlee-ui&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/minifridgejr/Documents/SoftwareDesign/software_design_T3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -109,38 +215,77 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-396cc1b2" />
+        <option value="jdk-11.0.22-temurin-11.0.22-4caba194b151-2ca77462" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3bfe4806-e4d5-4d81-96e5-2a46e794569d" name="Changes" comment="" />
-      <created>1707380587205</created>
+      <changelist id="ee32cf31-fc5a-4d9d-9036-181af24d1f7e" name="Changes" comment="" />
+      <created>1707380472752</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707380587205</updated>
-      <workItem from="1711712640325" duration="5691000" />
-      <workItem from="1711799882061" duration="791000" />
+      <updated>1707380472752</updated>
+      <workItem from="1707380474059" duration="640000" />
+      <workItem from="1707381120064" duration="3027000" />
+      <workItem from="1710255341507" duration="28000" />
+      <workItem from="1710255376809" duration="1366000" />
+      <workItem from="1710416466933" duration="318000" />
+      <workItem from="1710416790677" duration="3249000" />
+      <workItem from="1711375391943" duration="6489000" />
+      <workItem from="1711470039046" duration="5339000" />
+      <workItem from="1711949483150" duration="18286000" />
     </task>
-    <task id="LOCAL-00001" summary="most recent stuff">
+    <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
-      <created>1711738570871</created>
+      <created>1710256124348</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1711738570871</updated>
+      <updated>1710256124348</updated>
     </task>
-    <task id="LOCAL-00002" summary="most recent">
+    <task id="LOCAL-00002" summary="Continued adding logic, figured out how to select through popup window">
       <option name="closed" value="true" />
-      <created>1711799937295</created>
+      <created>1711470638702</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1711799937296</updated>
+      <updated>1711470638702</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="I'm confused">
+      <option name="closed" value="true" />
+      <created>1711718658238</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711718658239</updated>
+    </task>
+    <task id="LOCAL-00004" summary="I'm confused">
+      <option name="closed" value="true" />
+      <created>1711718686779</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711718686779</updated>
+    </task>
+    <task id="LOCAL-00005" summary="I'm confused">
+      <option name="closed" value="true" />
+      <created>1711719038178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711719038178</updated>
+    </task>
+    <task id="LOCAL-00006" summary="I'm confused">
+      <option name="closed" value="true" />
+      <created>1711719109356</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711719109356</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,8 +303,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="most recent stuff" />
-    <MESSAGE value="most recent" />
-    <option name="LAST_COMMIT_MESSAGE" value="most recent" />
+    <MESSAGE value="Test" />
+    <MESSAGE value="Continued adding logic, figured out how to select through popup window" />
+    <MESSAGE value="I'm confused" />
+    <option name="LAST_COMMIT_MESSAGE" value="I'm confused" />
   </component>
 </project>

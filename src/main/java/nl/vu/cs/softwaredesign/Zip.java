@@ -14,9 +14,9 @@ public class Zip extends CompressionStrategy {
     }
 
     @Override
-    public void compress(HashMap<File, Metadata> fileMap, String destination) {
-        try (ByteArrayOutputStream byteOutStream = new ByteArrayOutputStream();
-             ZipOutputStream zipOutStream = new ZipOutputStream(byteOutStream)) {
+    public byte[] compress(HashMap<File, Metadata> fileMap, String destination) {
+        try (ByteArrayOutputStream byOutstr = new ByteArrayOutputStream();
+             ZipOutputStream zipOutsr = new ZipOutputStream(byOutstr)) {
 
             zipOutStream.setLevel(compressionLevel);
 
@@ -30,17 +30,21 @@ public class Zip extends CompressionStrategy {
                 zipOutStream.closeEntry();
             }
 
-            zipOutStream.finish();
-            byte[] compressedData = byteOutStream.toByteArray();
+            zipOutsr.finish();
+            byte[] compressedData = byOutstr.toByteArray();
 
-            // Save compressed data to file
-            try (FileOutputStream fos = new FileOutputStream(destination)) {
+            String fileName = "archive.zip";
+            String fullPath = destination + File.separator + fileName;
+
+            try (FileOutputStream fos = new FileOutputStream(fullPath)) {
                 fos.write(compressedData);
             }
+            return compressedData;
 
         } catch (IOException exception) {
             exception.printStackTrace();
         }
+        return null;
     }
 
     @Override
@@ -52,10 +56,8 @@ public class Zip extends CompressionStrategy {
             while (entry != null) {
                 File outputFile = new File(destination, entry.getName());
                 if (!entry.isDirectory()) {
-                    // Ensure parent directories exist
                     outputFile.getParentFile().mkdirs();
 
-                    // Extract the file
                     try (BufferedOutputStream byteOutStream = new BufferedOutputStream(new FileOutputStream(outputFile))) {
                         byte[] bytesIn = new byte[4096];
                         int read;
@@ -64,7 +66,6 @@ public class Zip extends CompressionStrategy {
                         }
                     }
                 } else {
-                    // Ensure directory is created
                     outputFile.mkdirs();
                 }
                 zipIn.closeEntry();

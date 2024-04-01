@@ -12,14 +12,15 @@ public class Lz4 extends CompressionStrategy {
     }
 
     @Override
-    public void compress(HashMap<File, Metadata> fileMap, String destination) {
+    public byte[] compress(HashMap<File, Metadata> fileMap, String destination) {
         LZ4Factory factory = LZ4Factory.fastestInstance();
         LZ4Compressor compressor = factory.fastCompressor();
 
         try (ByteArrayOutputStream byteOutStream = new ByteArrayOutputStream()) {
+            byte[] compressed = new byte[10];
             for (File file : fileMap.keySet()) {
                 byte[] fileBytes = Files.readAllBytes(file.toPath());
-                byte[] compressed = compressor.compress(fileBytes);
+                compressed = compressor.compress(fileBytes);
 
                 // For simplicity, directly writing compressed bytes to the ByteArrayOutputStream
                 byteOutStream.write(compressed);
@@ -29,10 +30,13 @@ public class Lz4 extends CompressionStrategy {
             try (FileOutputStream fos = new FileOutputStream(destination)) {
                 fos.write(byteOutStream.toByteArray());
             }
+            return compressed;
 
         } catch (IOException exception) {
             exception.printStackTrace();
         }
+        byte[] test = new byte[10];
+        return test;
     }
 
     @Override

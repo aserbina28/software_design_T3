@@ -1,0 +1,20 @@
+Index: build/tmp/compileJava/source-classes-mapping.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>nl/vu/cs/softwaredesign/UserInterface.java\n nl.vu.cs.softwaredesign.UserInterface\n nl.vu.cs.softwaredesign.UserInterface$1\n nl.vu.cs.softwaredesign.UserInterface$Command\nnl/vu/cs/softwaredesign/Main.java\n nl.vu.cs.softwaredesign.Main\nnl/vu/cs/softwaredesign/Archive.java\n nl.vu.cs.softwaredesign.Archive\nnl/vu/cs/softwaredesign/Collection.java\n nl.vu.cs.softwaredesign.Collection\nnl/vu/cs/softwaredesign/Metadata.java\n nl.vu.cs.softwaredesign.Metadata\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build/tmp/compileJava/source-classes-mapping.txt b/build/tmp/compileJava/source-classes-mapping.txt
+--- a/build/tmp/compileJava/source-classes-mapping.txt	(revision c5e3ba655158adfaa9e5a5efadea25518c89f343)
++++ b/build/tmp/compileJava/source-classes-mapping.txt	(date 1711718882587)
+@@ -4,9 +4,3 @@
+  nl.vu.cs.softwaredesign.UserInterface$Command
+ nl/vu/cs/softwaredesign/Main.java
+  nl.vu.cs.softwaredesign.Main
+-nl/vu/cs/softwaredesign/Archive.java
+- nl.vu.cs.softwaredesign.Archive
+-nl/vu/cs/softwaredesign/Collection.java
+- nl.vu.cs.softwaredesign.Collection
+-nl/vu/cs/softwaredesign/Metadata.java
+- nl.vu.cs.softwaredesign.Metadata

@@ -16,12 +16,9 @@ public class Archive {
     private boolean isEncrypted = true;
     private CompressionStrategy compressor;
 
-    // Constructor for compressed data
-    public Archive(byte[] data) {
-        this.compressedData = data;
+
+    public Archive() {
         this.dateCreated = System.currentTimeMillis();
-        this.compressedSize = data.length;
-        this.isEncrypted = false;
     }
 
     public byte[] getCompressedData() {
@@ -52,7 +49,7 @@ public class Archive {
     }
     public void compress(CompressionStrategy c, String destination){
         this.compressor = c;
-        compressor.compress(fileMap, destination);
+        this.compressedData = compressor.compress(fileMap, destination);
     }
     public void decompress(String destination){
         compressor.decompress(this.compressedData, destination);

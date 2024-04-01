@@ -1,3 +1,5 @@
+package nl.vu.cs.softwaredesign;
+
 public class CryptoException extends Exception {
 
     public CryptoException() {

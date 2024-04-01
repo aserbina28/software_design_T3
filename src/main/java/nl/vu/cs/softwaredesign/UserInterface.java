@@ -12,7 +12,7 @@ import java.io.File;
 
 public class UserInterface {
     private static UserInterface instance;
-    // private List<> archives = new ArrayList<>();
+    Archive archive;
 
     private enum Command {
         ARCHIVE,
@@ -31,19 +31,27 @@ public class UserInterface {
         return instance;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CryptoException {
         UserInterface ui = UserInterface.getInstance();
 
         System.out.println("Welcome to Team 3's File Archiver!");
-        System.out.println("Enter a command to start.");
         System.out.println("(Available commands: archive, extract, preview, encrypt)");
 
+        System.out.println("Enter a command to start.");
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
         ui.interpretInput(input);
     }
 
-    private void interpretInput(String input) {
+    private void newPrompt() throws CryptoException {
+        UserInterface ui = UserInterface.getInstance();
+        System.out.println("Enter a command.");
+        Scanner scan = new Scanner(System.in);
+        String input = scan.nextLine();
+        ui.interpretInput(input);
+    }
+
+    private void interpretInput(String input) throws CryptoException {
         String[] words = input.split("\\s+");
 
         Command command;
@@ -84,9 +92,9 @@ public class UserInterface {
         if (result == JFileChooser.APPROVE_OPTION) {
             File[] selectedFiles = fileChooser.getSelectedFiles();
             return selectedFiles;
-        } else {
-            return null;
         }
+
+        return null;
     }
 
     private String selectDirectory() {
@@ -96,7 +104,6 @@ public class UserInterface {
 
         int result = fileChooser.showSaveDialog(null);
 
-        // Process the selected directory
         if (result == JFileChooser.APPROVE_OPTION) {
             File selectedDirectory = fileChooser.getSelectedFile();
             if (selectedDirectory != null) {
@@ -107,12 +114,9 @@ public class UserInterface {
         return null;
     }
 
-    private void archive() {
+    private void archive() throws CryptoException {
         UserInterface ui = UserInterface.getInstance();
-
-        System.out.println("Enter a name for your archive: ");
         Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
 
         System.out.println("Select files to add to your archive.");
         File[] filesToAdd = ui.selectFiles();
@@ -122,26 +126,91 @@ public class UserInterface {
         String destination = ui.selectDirectory();
         System.out.println(destination);
 
-        System.out.println("Available compression formats are ZIP and LZ4.\n" +
-                "Enter 1 for ZIP or 2 for LZ4.");
-        input = scan.nextLine();
-        if (input.equals("1")) {
-            System.out.println("You chose ZIP");
-        } else if (input.equals("2")) {
-            System.out.println("You chose LZ4");
-        } else {
-            System.out.println("Invalid");
+
+        CompressionStrategy compStrat = new Zip(0);
+
+        compStrat = new Zip(0);
+
+        Archive archive = new Archive();
+        for (File file : filesToAdd) {
+            archive.add(file);
         }
+
+        archive.compress(compStrat, destination);
+        this.archive = archive;
+
+        newPrompt();
     }
+    private void decrypt() throws CryptoException {
+        System.out.println("Select encrypted file to decrypt");
+        File[] filesToDecrypt = selectFiles(); // Assuming single selection
+        if (filesToDecrypt == null || filesToDecrypt.length == 0) {
+            System.out.println("No file selected.");
+            return;
+        }
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter your password: ");
+        String password = scan.nextLine();
+
+        System.out.println("Select a destination directory for the decrypted archive.");
+        String destination = selectDirectory();
+        if (destination == null) {
+            System.out.println("No destination selected.");
+            return;
+        }
+
+        Encryption encryption = new Encryption();
+        String decryptedPath = destination + "/decryptedArchive.zip";
+        File decryptedFile = new File(decryptedPath);
+        encryption.decrypt(password, filesToDecrypt[0], decryptedFile);
+
+        System.out.println("Successfully decrypted: " + decryptedPath);
+        newPrompt();
+    }
+
+
     private void extract() {
-        System.out.println("extract");
+        UserInterface ui = UserInterface.getInstance();
+        System.out.println("Select a destination directory.");
+        String destination = ui.selectDirectory();
+        archive.decompress(destination);
     }
+
+
     private void preview() {
-        System.out.println("preview");
+        System.out.println(archive);
     }
-    private void encrypt() {
-        System.out.println(("encrypt"));
+    private void encrypt() throws CryptoException {
+        System.out.println("Select a file to encrypt");
+        File[] filesToEncrypt = selectFiles();
+        if (filesToEncrypt == null || filesToEncrypt.length == 0) {
+            System.out.println("No file selected.");
+            return;
+        }
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Choose a password for encryption: ");
+        String password = scan.nextLine();
+
+        System.out.println("Select a destination directory for the encrypted file.");
+        String destination = selectDirectory();
+        if (destination == null) {
+            System.out.println("No destination selected.");
+            return;
+        }
+
+        Encryption encryption = new Encryption();
+        String encryptedPath = destination + "/encryptedArchive.zip";
+        File encryptedFile = new File(encryptedPath);
+        encryption.encrypt(password, filesToEncrypt[0], encryptedFile);
+
+        System.out.println("Successfully encrypted: " + encryptedPath);
+        archive.setEncrypted(true);
+        newPrompt();
     }
+
+
 
 
 }

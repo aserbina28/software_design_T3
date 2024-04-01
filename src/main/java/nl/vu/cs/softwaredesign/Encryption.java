@@ -1,3 +1,5 @@
+package nl.vu.cs.softwaredesign;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -31,10 +33,10 @@ public class Encryption {
     private static final int SALT_LENGTH = 16; // Define the length of the salt
 
     private static Encryption instance;
-    private Map<Integer, byte[]> archivesToPasswords; // Change the map value to byte array for storing salt
+    private byte[] password;
 
-    private Encryption() {
-        archivesToPasswords = new HashMap<>();
+    public Encryption() {
+
     }
 
     public static Encryption getInstance() {
@@ -43,18 +45,13 @@ public class Encryption {
         }
         return instance;
     }
-
-    private void update(int archiveId, byte[] salt) {
-        archivesToPasswords.put(archiveId, salt);
+    private void update(byte[] salt) {
+        password = salt;
     }
 
-    private boolean validatePassword(int archiveId, byte[] salt, String password) {
-        if (!archivesToPasswords.containsKey(archiveId)) {
-            return false; // Archive ID not found
-        }
+    private boolean validatePassword(byte[] salt, String password) {
 
-        byte[] storedSalt = archivesToPasswords.get(archiveId);
-        // Compare stored salt with provided salt
+        byte[] storedSalt = this.password;
         if (!Arrays.equals(salt, storedSalt)) {
             return false; // Salt mismatch
         }
@@ -66,32 +63,31 @@ public class Encryption {
     }
 
 
+    public void encrypt(String password, File inputFile, File outputFile) throws CryptoException {
 
-    public void encrypt(int archiveId, String password, File inputFile, File outputFile)
-            throws CryptoException {
         byte[] salt = generateSalt(password, SALT_LENGTH); // Generate salt
         doCrypto(Cipher.ENCRYPT_MODE, password, salt, inputFile, outputFile);
-        update(archiveId, salt);
+        update(salt);
     }
 
-    public void decrypt(int archiveId, String password, File inputFile, File outputFile)
-            throws CryptoException {
-        byte[] salt = archivesToPasswords.get(archiveId); // Retrieve stored salt
-        if (salt == null) {
-            throw new CryptoException("Salt not found for archive " + archiveId);
+    public void decrypt(String password, File inputFile, File outputFile) throws CryptoException {
+        try {
+            byte[] salt = this.password;
+            if (salt == null) {
+                throw new CryptoException("Salt not found for archive");
+            }
+
+            if (!validatePassword(salt, password)) {
+                throw new CryptoException("Invalid password for archive");
+            }
+
+            System.out.println("Password validated successfully.");
+
+            doCrypto(Cipher.DECRYPT_MODE, password, salt, inputFile, outputFile);
         }
-
-        //System.out.println("Retrieved salt: " + Arrays.toString(salt)); // Log retrieved salt
-
-        if (!validatePassword(archiveId, salt, password)) {
-            throw new CryptoException("Invalid password for archive " + archiveId);
+        catch (Exception e) {
+            throw new CryptoException();
         }
-
-        System.out.println("Password validated successfully."); // Log successful password validation
-
-        doCrypto(Cipher.DECRYPT_MODE, password, salt, inputFile, outputFile);
-        // If decryption is successful, remove the entry from the map
-        archivesToPasswords.remove(archiveId);
     }
 
 

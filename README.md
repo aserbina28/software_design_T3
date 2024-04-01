@@ -6,3 +6,4 @@ When submitting your project, remember to make a [GitHub release](https://docs.g
 The fat Jar must be runnable using a simple `java -jar <fat jar>` command.
 
 DEMO LINK: https://www.youtube.com/watch?v=wL6er4ZOJ_c
+
